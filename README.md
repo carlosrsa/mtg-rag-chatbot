@@ -3,10 +3,12 @@ Simple RAG chatbot to assist users in understanding the complex rules of MTG in 
 The project consists in a simple RAG to assist users in understanding the complex rules of MTG in a more digestable way.
 
 RAG (Retrieval Augmented Generation) is a technique that encapsulates all the previous topics with the final task for augmenting LLM knowledge with additional data.
+
 Architecture:
+
 	Phase 1 - Indexing:
-		Load: First we need to load our data. This is done with Document Loaders.
-		Split: Text splitters break large Documents into smaller chunks. This is useful both for indexing data and for passing it in to a model, since large chunks are harder to search over and won’t fit in a model’s finite context window.
+	 	Load: First we need to load our data. This is done with Document Loaders.
+	  	Split: Text splitters break large Documents into smaller chunks. This is useful both for indexing data and for passing it in to a model, since large chunks are harder to search over and won’t fit in a model’s finite context window.
 		Store: We need somewhere to store and index our splits, so that they can later be searched over. This is often done using a VectorStore and Embeddings model.
 
 	Phase 2 - RETRIEVAL AND GENERATION
@@ -26,6 +28,7 @@ Tech decisions:
 	LLMs: gpt-4o and gpt-4.1-nano
 	Embedding model: text-embedding-3-small
 	Web UI for LLM: Gradio
+
 
 Functional decisions:
 	1. Rules and Cards indexing are stored in separate collections
